@@ -1,0 +1,1232 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'American Captain';
+    src: url('fonts/AmericanCaptain.ttf')
+}
+@font-face {
+    font-family: 'Copperplate';
+    src: url('fonts/Copperplate.ttc')
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('fonts/BebasNeue-Regular.ttf')
+}
+@font-face {
+    font-family: 'Apple SD 산돌고딕 Neo';
+    src: url('fonts/AppleSDGothicNeoM.ttf')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box; 
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body,html {
+    width: 16070px;
+    height: 100%;
+}
+
+.wrap_bottom_line {
+    width: 16070px;
+    height: 60px;
+    background-color:transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.wrap_bottom_mo {
+    width: 5vw;
+    position: fixed;
+    left: 0;
+    right: 20vw;
+    margin: auto;
+    bottom: 1.6vw;
+    z-index: 40;
+}
+
+.wrap_bottom_text {
+    color: #ffffff;
+    width: 10vw;
+    position: fixed;
+    left: 0;
+    right: 5vw;
+    margin: auto;
+    bottom: 1.2vw;
+    transform:skew(-30deg);
+}
+
+.wrap_bottom_text p {
+    font-family: 'American Captain', sans-serif;
+    font-size: 2vw;
+    letter-spacing: 0.05em;
+}
+
+.wrap {
+    width: 16070px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}   
+
+
+/*  */
+header {
+    width: 2000px;
+    height: 100%;
+    background: #000 url(images/bg/bg1.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header_equalizer {
+    width: 5vw;
+    height: auto;
+    
+}
+
+.header_music_bt {
+    width: 7vw;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    position: absolute;
+    top: 3.3vh;
+    left: 3.5vw;
+    font-size: 1vw;
+    letter-spacing: 0.1em;
+    font-family: 'Copperplate',sans-serif;
+    cursor: pointer;
+}
+
+.header_music_bt:focus {
+    outline: none;
+}
+
+.header_title {
+    width: 30vw;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+.canvas{
+    filter: blur(1px);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+  }
+
+.header_navi_bt {
+    width: 50px;
+    height: 50px;
+    background: url(images/header/menu3.jpg) center no-repeat;
+    background-size: cover;
+    position: fixed;
+    bottom: 5vw;
+    left: 30px;
+    z-index: 999; 
+    cursor: pointer;
+}
+
+.header_navi_menu {
+    position: absolute;
+    right: -8vw;
+    top: -12vw;
+    color: #ffffff;
+    display: none;
+}
+
+.header_navi_menu li {
+    font-size: 1vw;
+    margin-bottom: 1vw;
+    font-family: 'Copperplate',sans-serif;
+    letter-spacing: 0.05em;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.header_navi_menu li:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.header_pic_wrap {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.header_character_pic {
+    width: 50vw;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.header_character_pic img {
+    width: 100%;
+}
+
+/* header 끝, trailer section 시작 */
+
+.trailer {
+    width: 3800px;
+    height: 100%;
+    background: #000 url(images/bg/bg2.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.trailer_title {
+    color: #ffffff;
+    font-size: 3.6vw;
+    letter-spacing: 0.05em;
+    font-family: 'American Captain', sans-serif;
+    font-style: italic;
+    width: 14vw;
+    position: absolute;
+    right: 90vw;
+    top: 12vw;
+}
+
+.trailer_title_underline1 {
+    width: 15vw;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 85vw;
+    top: 16vw;
+}
+
+.trailer_title_underline2 {
+    width: 10vw;
+    height: 8px;
+    border: 1px solid #fff;
+    border-top: none;
+    border-right: none;
+    position: absolute;
+    right: 88.5vw;
+    top: 16vw;
+}
+
+.trailer_text {
+    width: 15vw;
+    height: auto;
+    color: #ffffff;
+    font-size: 1.3vw;
+    font-family: 'Copperplate',sans-serif;
+    position: absolute;
+    right: 85.5vw;
+    top: 17vw;
+    z-index: 30;
+}
+
+.trailer_text_span1 {
+    color: #fa9804;
+}
+
+.trailer_text_span2 {
+    color: #92b0e9;
+}
+
+.trailer_cloud1 {
+    width: auto;
+    height: 100vh;
+    position: absolute;
+    right: 15vw;
+    top: 0;
+}
+
+.trailer_ship {
+    width: 20vw;
+    position: absolute;
+    right: 105vw;
+    top: 7vw;
+    z-index: 20;
+}
+
+.trailer_circle1 {
+    position: absolute;
+    right: 0;
+    bottom: -45vw;
+    opacity: 0.7;
+}
+.trailer_circle2 {
+    position: absolute;
+    right: 0;
+    bottom: -60vw;
+    opacity: 0.7;
+}
+.trailer_circle3 {
+    position: absolute;
+    right: 0;
+    bottom: -60vw;
+    opacity: 0.7;
+}
+
+.trailer_mainimg {
+    position: absolute;
+    width: 18vw;
+    right: 50vw;
+    bottom: 18vw;
+    z-index: 199;
+    cursor: pointer;
+}
+
+.trailer_subimg1 {
+    position: absolute;
+    width: 30vw;
+    right: 24vw;
+    bottom: 12vw;
+}
+
+.trailer_subimg2 {
+    position: absolute;
+    width: 20vw;
+    right: 74vw;
+    bottom: 8vw;
+}
+
+.trailer_subimg3 {
+    position: absolute;
+    width: 15vw;
+    right: 21vw;
+    bottom: 30vw;
+}
+
+.trailer_subimg4 {
+    position: absolute;
+    width: 15vw;
+    right: 30vw;
+    bottom: 33vw;
+}
+
+.trailer_images img{
+    transition: 0.3s;
+}
+
+.trailer_images img:hover {
+    transform: scale(1.2);
+}
+
+/* trailer section 끝, introduction section 시작 */
+
+.introduction {
+    width: 3200px;
+    height: 100%;
+    background: #000 url(images/bg/bg3.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.intro_title {
+    color: #ffffff;
+    font-family: 'American Captain', sans-serif;
+    font-style: italic;
+    font-size: 3.6vw;
+    position: absolute;
+    left: 60vw;
+    top: 7vw;
+    letter-spacing: 0.05em;
+}
+
+.intro_subtitle {
+    color: #ffffff;
+    font-family: 'Copperplate',sans-serif;
+    font-size: 1.5vw;
+    position: relative;
+    left: 60vw;
+    top: 11vw;
+}
+
+.intro_subtitle_button {
+    width: 1.2vw;
+    position: absolute;
+    left: 66vw;
+    top: 11.3vw;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.intro_subtitle_menu {
+    border: 2px solid #fff;
+    position: absolute;
+    left: 60vw;
+    top: 13vw;
+    opacity: 0.9;
+    display: none;
+    z-index: 101;
+}
+
+.intro_subtitle_menu li {
+    color: #ffffff;
+    font-family: 'Copperplate',sans-serif;
+    font-size: 1.2vw;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.intro_subtitle_menu li:first-child {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.intro_planet_big {
+    width: 30vw;
+    position: absolute;
+    left: 85vw;
+    top: 0;
+}
+
+.intro_planet_little {
+    position: absolute;
+    left: 102vw;
+    top: 7vw;
+}
+
+.intro_beam {
+    width: 50vw;
+    position: absolute;
+    left: 72vw;
+    bottom: 5vw;
+}
+
+.intro_desc {
+    width: 40vw;
+    height: 62vh;
+    transform: perspective(370px) rotateX(-45deg);
+    position: absolute;
+    left: 80vw;
+    bottom: 3.5vw;
+    padding: 1vw;
+    overflow: hidden;
+}
+
+.desc_text {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+
+.intro_desc p {
+    color: #ffffff;
+    font-size: 1.5vw;
+}
+
+.intro_desc_img {
+    float: right;
+    width: 50%;
+    opacity: 0.7;
+}
+
+.intro_playbt {
+    position: absolute;
+    left: 60vw;
+    bottom: 10vw;
+    padding: 0.2vw 1vw;
+    font-size: 1.5vw;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    font-family: 'Copperplate',sans-serif;
+}
+
+.intro_pausebt {
+    position: absolute;
+    left: 60vw;
+    bottom: 7.5vw;
+    padding: 0.2vw 1vw;
+    font-size: 1.5vw;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    font-family: 'Copperplate',sans-serif;
+}
+
+/* introduction section 끝, character section 시작 */
+
+.character {
+    width: 2200px;
+    height: 100%;
+    background: #000 url(images/bg/bg4.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+.character_titlebox {
+    position: absolute;
+    left: 5vw;
+    top: 7vw;
+}
+
+.character_title {
+    color: #ffffff;
+    font-family: 'American Captain', sans-serif;
+    font-style: italic;
+    font-size: 3.6vw;
+    letter-spacing: 0.05em;
+    position: relative;
+    z-index: 200;
+}
+
+.character_logo {
+    position: absolute;
+    left: -6vw;
+    top: -1vw;
+}
+
+.character_slide_wrap {
+    width: 90vw;
+    height: 90%;
+    position: absolute;
+    left: 10vw;
+    top: 0;
+    overflow: hidden;
+}
+
+.character_slide {
+    width: 400%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.character_slide li {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+.character_slide li:nth-child(1) {
+    background: url(images/character/wallE_bg.png) no-repeat;
+    background-size: 85%;
+    position: relative;
+    top: 5vw;
+}
+
+.character_walle_name {
+    position: absolute;
+    left: 10vw;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.character_walle_nametag {
+    position: absolute;
+    left: 4vw;
+    top: -8vw;
+    bottom: 0;
+    margin: auto;
+}
+
+.character_walle_textbox {
+    width: 25vw;
+    height: 30vw;
+    position: absolute;
+    right: 12vw;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url(images/character/character_textbox.png) center no-repeat;
+    background-size: cover;
+    padding: 2vw;
+    padding-left: 2.5vw;
+}
+
+.walle_text_scrollbox {
+    width: 83%;
+    height: 30%;
+    color: #ffffff;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    font-size: 1.1vw;
+    font-family: sans-serif;
+}
+
+.walle_lang_english {
+    width: 35%;
+    height: 5vh;
+    position: absolute;
+    left: 10%;
+    bottom: 7%;
+    border: 2px solid #b28741;
+    background-color: rgba(0,0,0,0.5);
+    color: #cb9b4b;
+    font-size: 1.2vw;
+    font-family: 'Bebas Neue',sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.walle_lang_korean {
+    width: 35%;
+    height: 5vh;
+    position: absolute;
+    right: 10%;
+    bottom: 7%;
+    border: 2px solid #b28741;
+    background-color: rgba(0,0,0,0.5);
+    color: #cb9b4b;
+    font-size: 1vw;
+    font-family: 'Apple SD 산돌고딕 Neo',sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.character_walle_textbox button:hover {
+    background-color:rgba(255,255,255,0.5);
+    color: #000000;
+    cursor: pointer;
+}
+
+
+.character_slide li:nth-child(2) {
+    background: url(images/character/eve_bg.png) center no-repeat;
+    background-size: 85%;
+    position: relative;
+    top: 5vw;
+    left: -5vw;
+}
+
+.character_eve_name {
+    position: absolute;
+    left: 30vw;
+    bottom: 10vw;
+}
+
+.character_eve_nametag {
+    position: absolute;
+    left: 25vw;
+    bottom: 12vw;
+}
+
+.character_eve_textbox {
+    width: 25vw;
+    height: 30vw;
+    position: absolute;
+    right: 12vw;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url(images/character/eve_textbox.png) center no-repeat;
+    background-size: cover;
+    padding: 2vw;
+    padding-left: 2.5vw;
+}
+
+
+.eve_text_scrollbox {
+    width: 83%;
+    height: 30%;
+    color: #ffffff;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    font-size: 1.1vw;
+    font-family: sans-serif;
+}
+
+.eve_lang_english {
+    width: 35%;
+    height: 5vh;
+    position: absolute;
+    left: 10%;
+    bottom: 7%;
+    border: 2px solid #a69eea;
+    background-color: rgba(0,0,0,0.5);
+    color: #a69eea;
+    font-size: 1.2vw;
+    font-family: 'Bebas Neue',sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.eve_lang_korean {
+    width: 35%;
+    height: 5vh;
+    position: absolute;
+    right: 10%;
+    bottom: 7%;
+    border: 2px solid #a69eea;
+    background-color: rgba(0,0,0,0.5);
+    color: #a69eea;
+    font-size: 1vw;
+    font-family: 'Apple SD 산돌고딕 Neo',sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.character_eve_textbox button:hover {
+    background-color:rgba(255,255,255,0.5);
+    color: #000000;
+    cursor: pointer;
+}
+
+.character_slide li:nth-child(3) {
+    background: url(images/character/captain_bg.png) center no-repeat;
+    background-size: 85%;
+    position: relative;
+    top: 5vw;
+    left: -3vw;
+}
+
+.character_captain_name {
+    position: absolute;
+    right: 10vw;
+    bottom: 7vw;
+}
+
+.character_captain_nametag {
+    position: absolute;
+    right: 8vw;
+    bottom: 11vw;
+}
+
+.character_captain_textbox {
+    width: 25vw;
+    height: 30vw;
+    position: absolute;
+    left: 14vw;
+    top: 5vw;
+    bottom: 5vw;
+    margin: auto;
+    background: url(images/character/captain_textbox.png) center no-repeat;
+    background-size: cover;
+    padding: 2vw;
+    padding-left: 2.5vw;
+}
+
+.captain_text_scrollbox {
+    width: 83%;
+    height: 30%;
+    color: #ffffff;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    font-size: 1.1vw;
+    font-family: sans-serif;
+}
+
+.captain_lang_english {
+    width: 35%;
+    height: 5vh;
+    position: absolute;
+    left: 10%;
+    bottom: 7%;
+    border: 2px solid #7fcf41;
+    background-color: rgba(0,0,0,0.5);
+    color: #7fcf41;
+    font-size: 1.2vw;
+    font-family: 'Bebas Neue',sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.captain_lang_korean {
+    width: 35%;
+    height: 5vh;
+    position: absolute;
+    right: 10%;
+    bottom: 7%;
+    border: 2px solid #7fcf41;
+    background-color: rgba(0,0,0,0.5);
+    color: #7fcf41;
+    font-size: 1vw;
+    font-family: 'Apple SD 산돌고딕 Neo',sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.character_captain_textbox button:hover {
+    background-color:rgba(255,255,255,0.5);
+    color: #000000;
+    cursor: pointer;
+}
+
+.character_slide li:nth-child(4) {
+    background: url(images/character/auto_bg.png) center no-repeat;
+    background-size: 85%;
+    position: relative;
+    top: 5vw;
+}
+
+.character_auto_name {
+    position: absolute;
+    left: 14vw;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.character_auto_nametag {
+    position: absolute;
+    left: 6vw;
+    top: 0;
+    bottom: 3vw;
+    margin: auto;
+}
+
+.character_auto_textbox {
+    width: 25vw;
+    height: 30vw;
+    position: absolute;
+    right: 12vw;
+    top: 0;
+    bottom: 5vw;
+    margin: auto;
+    background: url(images/character/auto_textbox.png) center no-repeat;
+    background-size: cover;
+    padding: 2vw;
+    padding-left: 2.5vw;
+}
+
+.auto_text_scrollbox {
+    width: 83%;
+    height: 30%;
+    color: #ffffff;
+    overflow: auto;
+    position: absolute;
+    top: 45%;
+    font-size: 1.1vw;
+    font-family: sans-serif;
+}
+
+.auto_lang_english {
+    width: 35%;
+    height: 5vh;
+    position: absolute;
+    left: 10%;
+    bottom: 7%;
+    border: 2px solid #db4624;
+    background-color: rgba(0,0,0,0.5);
+    color: #db4624;
+    font-size: 1.2vw;
+    font-family: 'Bebas Neue',sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.auto_lang_korean {
+    width: 35%;
+    height: 5vh;
+    position: absolute;
+    right: 10%;
+    bottom: 7%;
+    border: 2px solid #db4624;
+    background-color: rgba(0,0,0,0.5);
+    color: #db4624;
+    font-size: 1vw;
+    font-family: 'Apple SD 산돌고딕 Neo',sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.character_auto_textbox button:hover {
+    background-color:rgba(255,255,255,0.5);
+    color: #000000;
+    cursor: pointer;
+}
+
+.character_left_bt {
+    width: 50px;
+    height: 50px;
+    background: url(images/character/character_left_bt.png) center no-repeat;
+    background-size: cover;
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.character_left_bt:focus {
+    outline: none;
+}
+
+.character_right_bt {
+    width: 50px;
+    height: 50px;
+    background: url(images/character/character_right_bt.png) center no-repeat;
+    background-size: cover;
+    border: none;
+    position: absolute;
+    right: 6vw;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.character_right_bt:focus {
+    outline: none;
+}
+
+
+/* character section 끝, gallery section 시작 */
+
+.gallery {
+    width: 2400px;
+    height: 100%;
+    background: #000 url(images/bg/bg5.jpg) no-repeat;
+    position: relative;
+}
+
+.gallery_title {
+    color: #ffffff;
+    font-family: 'American Captain', sans-serif;
+    font-style: italic;
+    font-size: 3.6vw;
+    letter-spacing: 0.05em;
+    position: absolute;
+    top: 7vw;
+    left: 5vw;
+}
+
+.gallery_notice {
+    color: #ffffff;
+    font-family: 'Bebas Neue',sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 1.5vw;
+    position: absolute;
+    left: 18vw;
+    top: 7vw;
+}
+
+.gallery_box {
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    top: 15vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery_box li {
+    width: 20vw;
+    height: 30vh;
+    margin-top: 15vh;
+    background-color: yellow;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 1px 1px 10px #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.gallery_box li:hover {
+    transform: scale(1.2);
+}
+
+.gallery_box li:nth-child(even) {
+    margin-top: 25vh;
+}
+
+.gallery_box li:nth-child(1) {
+    background: url(images/gallery/gallery_img1.png) center no-repeat;
+    background-size: cover;
+}
+
+.gallery_box li:nth-child(2) {
+    background: url(images/gallery/gallery_img2.png) center no-repeat;
+    background-size: cover;
+}
+.gallery_box li:nth-child(3) {
+    background: url(images/gallery/gallery_img3.png) center no-repeat;
+    background-size: cover;
+}
+.gallery_box li:nth-child(4) {
+    background: url(images/gallery/gallery_img4.png) center no-repeat;
+    background-size: cover;
+}
+.gallery_box li:nth-child(5) {
+    background: url(images/gallery/gallery_img5.png) center no-repeat;
+    background-size: cover;
+}
+
+.gallery_box li:nth-child(odd) p {
+    color: #ffffff;
+    font-size: 1.5vw;
+    position: absolute;
+    left: 16%;
+    bottom: -10vh;
+    font-family: 'Copperplate',sans-serif;
+    display: none;
+}
+
+.gallery_box li:nth-child(even) p {
+    color: #ffffff;
+    font-size: 1.5vw;
+    position: absolute;
+    left: 16%;
+    top: -10vh;
+    font-family: 'Copperplate',sans-serif;
+    display: none;
+}
+
+/* puzzle section 끝, credit section 시작 */
+
+.credit {
+    width: 2470px;
+    height: 100%;
+    background: #000 url(images/bg/bg6.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.credit_navi_box {
+    position: absolute;
+    right: 0;
+    bottom: 2vh;
+    z-index: 5000;
+    display: flex;
+}
+
+
+.credit_navi_bt {
+    font-size: 2vw;
+    color: #ffffff;
+    border: none;
+    background-color: transparent;
+    font-family: 'American Captain',sans-serif;
+    letter-spacing: 0.1em;
+    margin-top: 6vh;
+}
+
+.credit_navi_bt::after {
+    content: '';
+    margin-left: 2vw;
+}
+
+.credit_navi_bt:focus {
+    outline: none;
+}
+
+.credit_navi_image {
+    width: 6vw;
+    position: relative;
+}
+
+.credit_title {
+    color: #ffffff;
+    position: absolute;
+    right: 8vw;
+    top: 5vw;
+    font-size: 3vw;
+    font-family: 'American Captain',sans-serif;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
+
+.credit_desc_box {
+    width: 12.5%;
+    height: 70%;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 10vw;
+    overflow: hidden;
+}
+
+.credit_desc {
+    position: absolute;
+    top: 0;
+    color: #ffffff;
+    font-size: 2vw;
+    font-family: 'Bebas Neue',sans-serif;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
+
+.credit_eve {
+    width: 11vw;
+    height: 15vw;
+    background:url(images/credit/credit_eve.png) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    left: 10vw;
+    margin: auto;
+    top: 48%;
+}
+
+
+.credit_eve_light1 {
+    width: 0.9vw;
+    position: absolute;
+    top: 10.25vh;
+    left: 0.55vw;
+    -webkit-filter: grayscale(100%);
+    filter: black;
+}
+
+.credit_eve_light2 {
+    width: 0.8vw;
+    position: absolute;
+    top: 12.5vh;
+    left: -0.1vw;
+    opacity: 0;
+}
+
+.credit_eve_light3 {
+    width: 0.85vw;
+    position: absolute;
+    top: 13.35vh;
+    left: 0.35vw;
+}
+
+.credit_eve_light4 {
+    width: 0.8vw;
+    position: absolute;
+    top: 13.4vh;
+    left: 2.1vw;
+    opacity: 0;
+}
+
+.credit_eve_light5 {
+    width: 0.8vw;
+    position: absolute;
+    top: 13.4vh;
+    left: 4.1vw;
+}
+
+.credit_eve_light6 {
+    width: 0.85vw;
+    position: absolute;
+    top: 13.9vh;
+    left: 5.4vw;
+    opacity: 0;
+}
+
+.credit_eve_light7 {
+    width: 0.7vw;
+    position: absolute;
+    top: 11.1vh;
+    left: 7.9vw;
+}
+
+.credit_eve_light8 {
+    width: 0.8vw;
+    position: absolute;
+    top: 13.58vh;
+    right: 0.82vw;
+    opacity: 0;
+}
+
+.credit_eve_light9 {
+    width: 1.2vw;
+    position: absolute;
+    top: 12.15vh;
+    right: 0.05vw;
+}
+
+
+@media screen and (min-width: 1450px) {
+        
+    .wrap_bottom_line {
+        height: 80px;
+    }
+
+    .wrap_bottom_text {
+        bottom: 1vw;
+    }
+
+
+    .header_title {
+        left: 30%;
+    }
+
+
+   .intro_desc {
+        height: 50vh;
+    }
+    
+
+    .trailer_circle1 {
+        width: 140vw;
+        left: 75vw;
+    }
+
+    .trailer_circle2 {
+        width: 140vw;
+        left: 75vw;
+    }
+
+    .trailer_circle3 {
+        width: 140vw;
+        left: 75vw;
+    }
+
+    .credit_title {
+        right: 8.2vw;
+        height: 80%;
+    }
+
+
+    .credit_desc_box {
+        right: 4vw;
+
+    }
+
+    .credit_eve_light1 {
+        top: 94px;
+        left: 10px;
+    }
+    
+    .credit_eve_light2 {
+        top: 115px;
+        left: -2px;
+    }
+    
+    .credit_eve_light3 {
+        top: 123px;
+        left: 6px;
+    }
+    
+    .credit_eve_light4 {
+        top: 126px;
+        left: 42px;
+    }
+    
+    .credit_eve_light5 {
+        top: 125px;
+        left: 79px;
+    }
+    
+    .credit_eve_light6 {
+        display: none;
+        top: 128px;
+        left: 106px;
+    }
+    
+    .credit_eve_light7 {
+        top: 102px;
+        left: 153px;
+    }
+    
+    .credit_eve_light8 {
+        top: 125px;
+        right: 15px;
+    }
+    
+    .credit_eve_light9 {
+        top: 114px;
+        right: 0px;
+    }
+    
+    
+    };
+
